@@ -13,11 +13,16 @@ namespace Hotel.ViewModels
     {
         public string Login { get; set; } = string.Empty;
         public string Password { get; set; } = string.Empty;
-        private string _message = string.Empty;
+        private string _message = string.Empty; 
+        public LoginForm Owner { get; set; }
         public string Message
         {
             get => _message;
             set => this.RaiseAndSetIfChanged(ref _message, value);
+        }
+        public LoginFormViewModel(LoginForm loginForm)
+        {
+            Owner = loginForm;
         }
 
         public void Auth()
@@ -45,12 +50,14 @@ namespace Hotel.ViewModels
             var loginForm = new GuestsWindow();
             loginForm.DataContext = new GuestsWindowViewModel();
             loginForm.Show();
+            Owner.Close();
         }
         public void OpenFormService()
         {
             var loginForm = new ServicesWindow();
             loginForm.DataContext = new ServicesWindowViewModel();
             loginForm.Show();
+            Owner.Close();
         }
     }
 }

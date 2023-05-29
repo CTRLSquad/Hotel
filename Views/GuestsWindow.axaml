@@ -5,5 +5,28 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Hotel.Views.GuestsWindow"
         Title="Список постояльцев | Гостиница Адский Рай">
-  Welcome to Avalonia!
+	<StackPanel>
+    <StackPanel Orientation="Horizontal">
+      <Button Margin="5" Content="Создать" DockPanel.Dock="Bottom" Command="{Binding OpenEdit}"></Button>
+		<Button Margin="5" Content="Изменить" DockPanel.Dock="Bottom" Command="{Binding OpenEdit}"></Button>
+		<Button Margin="5" Content="Сохранить" DockPanel.Dock="Bottom" Command="{Binding OpenEdit}"></Button>
+		<Button Margin="5" Content="Удалить" DockPanel.Dock="Bottom" Command="{Binding OpenEdit}"></Button>
+    </StackPanel>
+		<ListBox Items="{Binding Guests}" DockPanel.Dock="Top">
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<StackPanel Orientation="Horizontal">
+						<TextBlock Text="ФИО: "></TextBlock>
+						<TextBlock Margin="1,0,0,0" Text="{Binding Fio}"></TextBlock>
+						<TextBlock Margin="5,0,0,0" Text="| Номер комнаты: "></TextBlock>
+						<TextBlock Margin="1,0,0,0" Text="{Binding RoomNumber}"></TextBlock>
+						<TextBlock Margin="5,0,0,0" Text="| Номер паспорта: "></TextBlock>
+						<TextBlock Margin="1,0,0,0" Text="{Binding PassportNumber}"></TextBlock>
+						<TextBlock Margin="5,0,0,0" Text="| ВИП?: "></TextBlock>
+						<TextBlock Margin="1,0,0,0" Text="{Binding IsVip}"></TextBlock>				
+					</StackPanel>
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+		</ListBox>
+	</StackPanel>
 </Window>

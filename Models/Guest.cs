@@ -11,7 +11,7 @@ public partial class Guest
 
     public int RoomNumber { get; set; }
 
-    public ulong IsVip { get; set; }
+    public string IsVip { get; set; } = null!;
 
     public string PassportNumber { get; set; } = null!;
 }

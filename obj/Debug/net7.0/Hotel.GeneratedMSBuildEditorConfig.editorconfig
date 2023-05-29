@@ -22,6 +22,3 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [A:/repos/Hotel/Views/LoginForm.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
-[A:/repos/Hotel/Views/ServicesWindow.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

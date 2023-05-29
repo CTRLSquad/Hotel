@@ -38,7 +38,7 @@ public partial class HotelContext : DbContext
                 .HasMaxLength(255)
                 .HasColumnName("fio");
             entity.Property(e => e.IsVip)
-                .HasColumnType("bit(1)")
+                .HasMaxLength(255)
                 .HasColumnName("is_vip");
             entity.Property(e => e.PassportNumber)
                 .HasMaxLength(11)

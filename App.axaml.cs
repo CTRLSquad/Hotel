@@ -18,7 +18,7 @@ namespace Hotel
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
                 LoginForm loginWindow = new LoginForm();
-                loginWindow.DataContext = new LoginFormViewModel();
+                loginWindow.DataContext = new LoginFormViewModel(loginWindow);
                 desktop.MainWindow = loginWindow;
             }
 
