@@ -1,10 +1,11 @@
 using Avalonia.Controls;
+using Hotel.ViewModels;
 
 namespace Hotel.Views
 {
-    public partial class MainWindow : Window
+    public partial class ServicesWindow : Window
     {
-        public MainWindow()
+        public ServicesWindow()
         {
             InitializeComponent();
         }

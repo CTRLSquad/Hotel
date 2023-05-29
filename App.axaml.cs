@@ -17,10 +17,9 @@ namespace Hotel
         {
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
-                desktop.MainWindow = new MainWindow
-                {
-                    DataContext = new MainWindowViewModel(),
-                };
+                LoginForm loginWindow = new LoginForm();
+                loginWindow.DataContext = new LoginFormViewModel();
+                desktop.MainWindow = loginWindow;
             }
 
             base.OnFrameworkInitializationCompleted();
