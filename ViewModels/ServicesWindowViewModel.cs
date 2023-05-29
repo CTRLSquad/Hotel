@@ -10,20 +10,20 @@ using System.Threading.Tasks;
 
 namespace Hotel.ViewModels
 {
-    internal class GuestsWindowViewModel : ViewModelBase
+    internal class ServicesWindowViewModel : ViewModelBase
     {
-        private ObservableCollection<Guest> _guests;
-        public ObservableCollection<Guest> Guests
+        private ObservableCollection<Service> _services;
+        public ObservableCollection<Service> Services
         {
-            get => _guests;
-            set => this.RaiseAndSetIfChanged(ref _guests, value);
+            get => _services;
+            set => this.RaiseAndSetIfChanged(ref _services, value);
         }
         private User user { get; set; }
-        public GuestsWindowViewModel()
+        public ServicesWindowViewModel()
         {
             HotelContext dbContext = new HotelContext();
-            dbContext.Guests.Load();
-            Guests = dbContext.Guests.Local.ToObservableCollection();
+            dbContext.Services.Load();
+            Services = dbContext.Services.Local.ToObservableCollection();
         }
         public void OpenEdit()
         {
