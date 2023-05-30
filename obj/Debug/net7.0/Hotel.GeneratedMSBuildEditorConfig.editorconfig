@@ -17,6 +17,15 @@ build_property.ProjectDir = A:\repos\Hotel\
 [A:/repos/Hotel/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[A:/repos/Hotel/Views/EditGuestsWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[A:/repos/Hotel/Views/EditServicesWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[A:/repos/Hotel/Views/GuestsWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [A:/repos/Hotel/Views/LoginForm.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 

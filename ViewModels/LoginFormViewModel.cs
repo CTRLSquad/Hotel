@@ -48,14 +48,14 @@ namespace Hotel.ViewModels
         public void OpenFormStaff()
         {
             var loginForm = new GuestsWindow();
-            loginForm.DataContext = new GuestsWindowViewModel();
+            loginForm.DataContext = new GuestsWindowViewModel(loginForm);
             loginForm.Show();
             Owner.Close();
         }
         public void OpenFormService()
         {
             var loginForm = new ServicesWindow();
-            loginForm.DataContext = new ServicesWindowViewModel();
+            loginForm.DataContext = new ServicesWindowViewModel(loginForm);
             loginForm.Show();
             Owner.Close();
         }
