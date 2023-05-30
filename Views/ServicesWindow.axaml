@@ -5,5 +5,25 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Hotel.Views.ServicesWindow"
         Title="Список услуг | Гостиница Адский Рай">
-  Welcome to Avalonia!
+  <StackPanel>
+    <StackPanel Orientation="Horizontal">
+      <Button Margin="5" Content="Создать" DockPanel.Dock="Bottom" Command="{Binding CreateGuest}"></Button>
+      <Button Margin="5" Content="Изменить" DockPanel.Dock="Bottom" Command="{Binding OpenEdit}"></Button>
+      <Button Margin="5" Content="Сохранить" DockPanel.Dock="Bottom" Command="{Binding SaveButton}"></Button>
+      <Button Margin="5" Content="Удалить" DockPanel.Dock="Bottom" Command="{Binding DeleteGuest}"></Button>
+      <Button Margin="5" Content="Обновить" DockPanel.Dock="Bottom" Command="{Binding ReloadWindow}"></Button>
+    </StackPanel>
+    <ListBox SelectedItem="{Binding SelectedService}" Items="{Binding Services}" DockPanel.Dock="Top">
+      <ListBox.ItemTemplate>
+        <DataTemplate>
+          <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Услуга: "></TextBlock>
+            <TextBlock Margin="1,0,0,0" Text="{Binding Name}"></TextBlock>
+            <TextBlock Margin="5,0,0,0" Text="| Цена: "></TextBlock>
+            <TextBlock Margin="1,0,0,0" Text="{Binding PriceTry}"></TextBlock>          
+          </StackPanel>
+        </DataTemplate>
+      </ListBox.ItemTemplate>
+    </ListBox>
+  </StackPanel>
 </Window>

@@ -29,4 +29,13 @@
     <PackageReference Include="MySql.EntityFrameworkCore" Version="7.0.2" />
     <PackageReference Include="XamlNameReferenceGenerator" Version="1.6.1" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\EditGuestsWindow.axaml.cs">
+      <DependentUpon>EditGuestsWindow.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\EditService.axaml.cs">
+      <DependentUpon>EditService.axaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>
