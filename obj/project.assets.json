@@ -6241,7 +6241,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\maksi\\.nuget\\packages\\": {},
+    "C:\\Users\\mmm\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
@@ -6250,14 +6250,14 @@
       "projectUniqueName": "A:\\repos\\Hotel\\Hotel.csproj",
       "projectName": "Hotel",
       "projectPath": "A:\\repos\\Hotel\\Hotel.csproj",
-      "packagesPath": "C:\\Users\\maksi\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\mmm\\.nuget\\packages\\",
       "outputPath": "A:\\repos\\Hotel\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\maksi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mmm\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

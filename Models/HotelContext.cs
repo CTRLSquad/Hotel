@@ -68,10 +68,9 @@ public partial class HotelContext : DbContext
             entity.ToTable("users");
 
             entity.Property(e => e.Id).HasColumnName("id");
-            entity.Property(e => e.IdGuests).HasColumnName("id_guests");
-            entity.Property(e => e.IsStaff)
+            entity.Property(e => e.IsAdmin)
                 .HasMaxLength(100)
-                .HasColumnName("is_staff");
+                .HasColumnName("is_admin");
             entity.Property(e => e.Login)
                 .HasMaxLength(100)
                 .HasColumnName("login");

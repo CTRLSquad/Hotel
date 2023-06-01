@@ -11,7 +11,5 @@ public partial class User
 
     public string Password { get; set; } = null!;
 
-    public string IsStaff { get; set; } = null!;
-
-    public int? IdGuests { get; set; }
+    public string IsAdmin { get; set; } = null!;
 }

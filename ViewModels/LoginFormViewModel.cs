@@ -31,11 +31,11 @@ namespace Hotel.ViewModels
             User? user = db.Users.Where(u => u.Login == Login && u.Password == Password).FirstOrDefault();
             if (user != null)
             {
-                if (user.IsStaff == "1")
+                if (user.IsAdmin == "0")
                 {
                     OpenFormStaff();
                 }
-                if (user.IsStaff == "0")
+                if (user.IsAdmin == "1")
                 {
                     OpenFormService();
                 }
