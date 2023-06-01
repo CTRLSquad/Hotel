@@ -41,6 +41,10 @@ namespace Hotel.ViewModels
             EditServicesWindow editService = new EditServicesWindow();
             editService.DataContext = new EditWindowServicesViewModel(SelectedService, editService);
             editService.Show();
+            editService.Closed += (sender, args) =>
+            {
+                ReloadWindow();
+            };
         }
         public void SaveButton()
         {
@@ -58,14 +62,16 @@ namespace Hotel.ViewModels
             Services.Add(newService);
             editService.DataContext = new EditWindowServicesViewModel(newService, editService);
             editService.Show();
-
+            editService.Closed += (sender, args) =>
+            {
+                ReloadWindow();
+            };
         }
         public void ReloadWindow()
         {
             var old = Services;
             Services = null!;
             Services = old;
-
         }
     }
 }

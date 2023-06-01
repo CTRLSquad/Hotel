@@ -1,5 +1,7 @@
-﻿using Hotel.Models;
+﻿using Avalonia.Controls;
+using Hotel.Models;
 using Hotel.Views;
+using Microsoft.CodeAnalysis.Scripting.Hosting;
 using Microsoft.EntityFrameworkCore;
 using ReactiveUI;
 using SkiaSharp;
@@ -30,8 +32,9 @@ namespace Hotel.ViewModels
             dbContext.Guests.Load();
             Guests = dbContext.Guests.Local.ToObservableCollection();
         }
-        public GuestsWindow Owner;
         public HotelContext dbContext { get; set; }
+        public GuestsWindow Owner;
+        
         public GuestsWindowViewModel(GuestsWindow Owner) : this()
         {
             this.Owner = Owner;
@@ -42,6 +45,10 @@ namespace Hotel.ViewModels
             EditGuestsWindow editGuests = new EditGuestsWindow();
             editGuests.DataContext = new EditWindowGuestsViewModel(SelectedGuest, editGuests);
             editGuests.Show();
+            editGuests.Closed += (sender, args) =>
+            {
+                ReloadWindow();
+            };
         }
         public void SaveButton()
         {
@@ -59,15 +66,16 @@ namespace Hotel.ViewModels
             Guests.Add(newGuest);
             editGuests.DataContext = new EditWindowGuestsViewModel(newGuest, editGuests);
             editGuests.Show();
-            ReloadWindow();
-
+            editGuests.Closed += (sender, args) =>
+            {
+                ReloadWindow();
+            };
         }
         public void ReloadWindow()
         {
             var old = Guests;
             Guests = null!;
             Guests = old;
-            
         }
     }
 }

@@ -23,7 +23,6 @@ namespace Hotel.ViewModels
         public void Ok_Button()
         {
             Owner.Close();
-
         }
     }
 }

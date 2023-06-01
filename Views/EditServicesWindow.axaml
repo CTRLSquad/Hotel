@@ -10,6 +10,6 @@
     <TextBox Text="{Binding SelectedService.Name}"></TextBox>
     <TextBlock Text="Цена: "></TextBlock>
     <TextBox Text="{Binding SelectedService.PriceTry}"></TextBox>
-    <Button   Margin="3" Content="Сойдёт" Command="{Binding Ok_Button}" CommandParameter=""></Button>
+    <Button Margin="3" Content="Сойдёт" Command="{Binding Ok_Button}" CommandParameter=""></Button>
   </StackPanel>
 </Window>
