@@ -44,7 +44,7 @@ namespace Hotel.ViewModels
         {
             EditGuestsWindow editGuests = new EditGuestsWindow();
             editGuests.DataContext = new EditWindowGuestsViewModel(SelectedGuest, editGuests);
-            editGuests.Show();
+            editGuests.ShowDialog(Owner);
             editGuests.Closed += (sender, args) =>
             {
                 ReloadWindow();
@@ -65,7 +65,7 @@ namespace Hotel.ViewModels
             EditGuestsWindow editGuests = new EditGuestsWindow();
             Guests.Add(newGuest);
             editGuests.DataContext = new EditWindowGuestsViewModel(newGuest, editGuests);
-            editGuests.Show();
+            editGuests.ShowDialog(Owner);
             editGuests.Closed += (sender, args) =>
             {
                 ReloadWindow();
